@@ -3,383 +3,498 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Vertical Fibra – Internet Fibra Óptica em Londrina</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <!-- Fonte moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <meta name="description" content="Vertical Fibra - Internet de alta velocidade em Londrina PR. Fibra óptica, suporte 24h, planos acessíveis. Assine já!">
+  <meta name="keywords" content="internet, fibra óptica, Londrina, provedor, Vertical Fibra, banda larga, ultra velocidade">
+  <meta name="author" content="Vertical Fibra">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Vertical Fibra - Internet Fibra Óptica em Londrina">
+  <meta property="og:description" content="Conecte-se com a melhor fibra óptica de Londrina. Planos imperdíveis e suporte dedicado.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://verticalfibra.com.br">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Vertical Fibra - Internet Fibra Óptica | Londrina PR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
+    :root {
+      --primary: #0d6efd;
+      --primary-dark: #0b5ed7;
+      --accent: #00d4ff;
+      --dark: #0a0f1c;
+      --light-bg: #f8f9fc;
+      --text-muted: #6c757d;
+      --gradient-hero: linear-gradient(135deg, #001f3f 0%, #003366 50%, #0a0f1c 100%);
+      --gradient-card: linear-gradient(145deg, #ffffff 0%, #f0f4ff 100%);
+      --shadow-soft: 0 20px 45px rgba(0, 0, 0, 0.08);
+      --shadow-card: 0 12px 30px rgba(0, 35, 70, 0.12);
+      --border-radius: 1.2rem;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: #fff;
+      color: #1e293b;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(10, 15, 28, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s ease;
+    }
+    .navbar.scrolled {
+      background: rgba(10, 15, 28, 0.95);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
     .navbar-brand {
       font-weight: 700;
-      font-size: 1.5rem;
-      color: #0052cc !important;
-    }
-    .hero {
-      background: linear-gradient(135deg, rgba(0,82,204,0.85) 0%, rgba(0,180,148,0.8) 100%), 
-                  url('https://st2.depositphotos.com/1907633/6292/i/450/depositphotos_62926939-stock-photo-businessman-shows-modern-technology-as.jpg') center/cover no-repeat;
-      min-height: 85vh;
-      color: #fff;
+      font-size: 1.8rem;
+      letter-spacing: -0.5px;
+      color: #ffffff !important;
       display: flex;
       align-items: center;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      gap: 0.5rem;
     }
-    .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      margin-bottom: 1.2rem;
+    .navbar-brand i {
+      color: var(--accent);
+      font-size: 2rem;
+      filter: drop-shadow(0 0 8px rgba(0,212,255,0.5));
     }
-    .btn-primary-custom {
-      background-color: #ff6600;
-      border: none;
-      padding: 0.8rem 2rem;
-      font-weight: 600;
-      border-radius: 50px;
-      transition: all 0.3s ease;
+    .navbar-nav .nav-link {
+      color: rgba(255,255,255,0.85) !important;
+      font-weight: 500;
+      margin: 0 0.2rem;
+      padding: 0.5rem 1rem !important;
+      border-radius: 2rem;
+      transition: all 0.2s;
     }
-    .btn-primary-custom:hover {
-      background-color: #e65c00;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(255,102,0,0.4);
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: #fff !important;
+      background: rgba(255,255,255,0.1);
     }
-    .section-title {
-      font-weight: 700;
-      color: #0052cc;
-      position: relative;
-      display: inline-block;
-      margin-bottom: 2.5rem;
-    }
-    .section-title::after {
-      content: '';
-      width: 60px;
-      height: 4px;
-      background: #ff6600;
-      display: block;
-      margin: 10px auto 0;
-      border-radius: 2px;
-    }
-    .plan-card {
-      transition: transform 0.3s, box-shadow 0.3s;
-      border: none;
-      border-radius: 20px;
-      background: #ffffff;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
-    }
-    .plan-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
-    .plan-card .card-header {
-      background: #0052cc;
-      color: #fff;
-      border-radius: 20px 20px 0 0 !important;
-      font-weight: 700;
-    }
-    .plan-price {
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: #0052cc;
-    }
-    .testimonial-card {
-      background: #f8f9ff;
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      border-left: 5px solid #00b894;
-    }
-    .footer {
-      background: #0b1c3a;
-      color: #ccd6e0;
-    }
-    .footer a {
-      color: #a8c7ff;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      color: #ff6600;
-      text-decoration: underline;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
+    .btn-whatsapp-nav {
       background: #25d366;
       color: #fff;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
+      border-radius: 2rem;
+      padding: 0.5rem 1.4rem;
+      font-weight: 600;
+      border: none;
+      transition: 0.3s;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-      z-index: 1000;
-      transition: transform 0.3s;
+      gap: 0.4rem;
     }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
+    .btn-whatsapp-nav:hover {
+      background: #1ebc5a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+    }
+
+    /* Hero */
+    .hero-section {
+      background: var(--gradient-hero);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1400&q=80') center/cover no-repeat;
+      opacity: 0.25;
+      mix-blend-mode: overlay;
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-badge {
+      background: rgba(0,212,255,0.15);
+      border: 1px solid rgba(0,212,255,0.3);
+      color: #b3f0ff;
+      padding: 0.5rem 1.4rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(10px);
+    }
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .hero-title span {
+      background: linear-gradient(to right, #00d4ff, #5b9eff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
+    .btn-hero-primary {
+      background: #0066ff;
+      border: none;
+      padding: 0.9rem 2.5rem;
+      font-weight: 700;
+      border-radius: 3rem;
+      color: #fff;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      box-shadow: 0 10px 25px rgba(0,102,255,0.4);
+    }
+    .btn-hero-primary:hover {
+      background: #0052cc;
+      transform: translateY(-3px);
+      box-shadow: 0 18px 35px rgba(0,102,255,0.55);
+    }
+    .btn-hero-outline {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.5);
+      color: #fff;
+      padding: 0.9rem 2.5rem;
+      font-weight: 600;
+      border-radius: 3rem;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    .btn-hero-outline:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: #fff;
+    }
+    .hero-image-wrapper {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-image-wrapper img {
+      max-width: 100%;
+      border-radius: 2rem;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Seção Vantagens */
+    .section-title {
+      font-weight: 800;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0a0f1c;
+    }
+    .section-title span {
+      color: #0066ff;
+    }
+    .vantagem-card {
+      background: #fff;
+      border-radius: var(--border-radius);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-card);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(0,0,0,0.03);
+      height: 100%;
+      text-align: center;
+    }
+    .vantagem-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 50px rgba(0, 60, 150, 0.15);
+    }
+    .vantagem-icon {
+      font-size: 3.2rem;
+      color: #0066ff;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .vantagem-card h5 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    /* Sobre */
+    .sobre-section {
+      background: #f8f9fc;
+    }
+
+    /* Contato */
+    .contato-card {
+      background: #0a0f1c;
+      color: #fff;
+      border-radius: 2rem;
+      padding: 2.5rem;
+      height: 100%;
+    }
+    .contato-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+    }
+    .contato-item i {
+      font-size: 1.5rem;
+      color: #00d4ff;
+      margin-top: 0.2rem;
+    }
+    .btn-whatsapp-large {
+      background: #25d366;
+      color: #fff;
+      font-weight: 700;
+      padding: 1rem 2.2rem;
+      border-radius: 3rem;
+      font-size: 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      transition: all 0.3s;
+      border: none;
+    }
+    .btn-whatsapp-large:hover {
+      background: #1ebc5a;
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(37,211,102,0.45);
+    }
+    footer {
+      background: #0a0f1c;
+      color: #adb5bd;
+      padding: 3rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    footer a {
+      color: #adb5bd;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer a:hover {
+      color: #00d4ff;
+    }
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
       color: #fff;
     }
-    .icon-tech {
-      font-size: 2.5rem;
-      color: #0052cc;
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.4rem; }
     }
   </style>
 </head>
 <body id="top">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm py-2">
-    <div class="container">
-      <a class="navbar-brand" href="#top">
-        <i class="bi bi-wifi"></i> Vertical Fibra
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarMain">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#planos">Planos</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#depoimentos">Clientes</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#contato">Contato</a></li>
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-primary-custom text-white" href="#planos">Assine já</a>
-          </li>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="fas fa-broadcast-tower"></i> Vertical<span style="color:#00d4ff;">Fibra</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+            style="border-color: rgba(255,255,255,0.3);">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#vantagens">Vantagens</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <a href="https://wa.me/554337712726?text=Olá%20Vertical%20Fibra%2C%20quero%20saber%20mais%20sobre%20os%20planos!" 
+             target="_blank" class="btn btn-whatsapp-nav">
+            <i class="fab fa-whatsapp"></i> (43) 3771-2726
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero-section" id="home">
+  <div class="container hero-content">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <div class="hero-badge"><i class="fas fa-wifi me-2"></i> Fibra óptica de verdade</div>
+        <h1 class="hero-title">Internet que <span>acelera</span> sua vida</h1>
+        <p class="hero-subtitle">Ultra velocidade com fibra óptica em Londrina. Conexão estável, suporte humano e o melhor custo-benefício da região.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="https://wa.me/554337712726?text=Quero%20assinar%20a%20Vertical%20Fibra!" target="_blank" class="btn btn-hero-primary">
+            <i class="fas fa-paper-plane me-2"></i> Assinar agora
+          </a>
+          <a href="#vantagens" class="btn btn-hero-outline">
+            <i class="fas fa-arrow-down me-2"></i> Ver planos
+          </a>
+        </div>
+        <div class="mt-4 text-white-50 small">
+          <i class="fas fa-shield-alt me-1"></i> Instalação grátis • Sem fidelidade • Suporte 24h
+        </div>
+      </div>
+      <div class="col-lg-5 hero-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f2?w=600&q=80" 
+             alt="Tecnologia fibra óptica" class="img-fluid"
+             style="border-radius: 2rem;" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vantagens -->
+<section id="vantagens" class="py-5 bg-white">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Por que escolher a <span>Vertical Fibra</span>?</h2>
+      <p class="text-muted lead">Tecnologia de ponta com atendimento que faz a diferença</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="vantagem-card">
+          <i class="fas fa-tachometer-alt vantagem-icon"></i>
+          <h5>Velocidade Real</h5>
+          <p class="text-muted">Conexão simétrica com upload e download de alta performance, ideal para streaming, games e home office.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="vantagem-card">
+          <i class="fas fa-headset vantagem-icon"></i>
+          <h5>Suporte 24h</h5>
+          <p class="text-muted">Equipe técnica pronta para ajudar a qualquer momento. Atendimento humano e rápido.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="vantagem-card">
+          <i class="fas fa-shield-haltered vantagem-icon"></i>
+          <h5>Estabilidade</h5>
+          <p class="text-muted">Rede 100% fibra óptica com redundância, garantindo conexão estável sem oscilações.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="vantagem-card">
+          <i class="fas fa-tag vantagem-icon"></i>
+          <h5>Preço Justo</h5>
+          <p class="text-muted">Planos acessíveis sem perder qualidade. O melhor custo-benefício de Londrina.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sobre resumido -->
+<section class="sobre-section py-5">
+  <div class="container py-5">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" 
+             alt="Equipe Vertical Fibra" class="img-fluid rounded-4 shadow-lg"
+             onerror="this.style.display='none'">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="section-title">Quem somos <span>nós</span></h2>
+        <p class="lead">A <strong>Vertical Fibra Provedor de Acesso a Internet LTDA</strong> é uma empresa londrinense focada em oferecer internet de alta qualidade através de fibra óptica.</p>
+        <p>Fundada em 16/08/2025, atuamos com seriedade e compromisso para conectar pessoas e empresas à melhor experiência digital. Nossa razão social é Vertical Fibra Provedor de Acesso A Internet LTDA, CNPJ 62.257.542/0001-00, e estamos localizados no coração de Londrina.</p>
+        <a href="sobre.html" class="btn btn-outline-primary rounded-pill px-4 mt-2">Conheça nossa história <i class="fas fa-arrow-right ms-1"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contato -->
+<section id="contato" class="py-5 bg-white">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Fale com a <span>Vertical Fibra</span></h2>
+      <p class="text-muted lead">Estamos prontos para te atender</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="contato-card">
+          <h4 class="mb-4 fw-bold"><i class="fas fa-phone-alt me-2"></i> Canais de atendimento</h4>
+          <div class="contato-item">
+            <i class="fas fa-phone"></i>
+            <div><strong>Telefone</strong><br><a href="tel:554337712726" class="text-white text-decoration-none">(43) 3771-2726</a></div>
+          </div>
+          <div class="contato-item">
+            <i class="fas fa-envelope"></i>
+            <div><strong>E-mail</strong><br><a href="mailto:contato@verticalfibra.com.br" class="text-white text-decoration-none">contato@verticalfibra.com.br</a></div>
+          </div>
+          <div class="contato-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div><strong>Endereço</strong><br>Rua Mato Grosso, 1435, Sala 02, Centro<br>Londrina - PR, 86010-180</div>
+          </div>
+          <div class="mt-4">
+            <a href="https://wa.me/554337712726?text=Olá!%20Gostaria%20de%20informações%20sobre%20os%20planos%20Vertical%20Fibra." 
+               target="_blank" class="btn-whatsapp-large text-decoration-none">
+              <i class="fab fa-whatsapp fa-lg"></i> Chamar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow h-100">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.433415458245!2d-51.172345684506!3d-23.320442084803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb4e9c8c1e1b1b%3A0x9b9e9b7e9b9e9b9e!2sRua%20Mato%20Grosso%2C%201435%20-%20Centro%2C%20Londrina%20-%20PR%2C%2086010-180!5e0!3m2!1spt-BR!2sbr!4v1690000000000"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" title="Localização Vertical Fibra">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4 mb-3">
+        <div class="footer-logo mb-2">
+          <i class="fas fa-broadcast-tower" style="color:#00d4ff;"></i> Vertical<span style="color:#00d4ff;">Fibra</span>
+        </div>
+        <p class="small">Provedor de acesso à internet via fibra óptica. Conectando Londrina com velocidade e estabilidade.</p>
+        <p class="small mb-0">CNPJ: 62.257.542/0001-00</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h6 class="text-uppercase text-white mb-3">Links úteis</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="index.html"><i class="fas fa-chevron-right me-1"></i> Início</a></li>
+          <li class="mb-2"><a href="sobre.html"><i class="fas fa-chevron-right me-1"></i> Sobre a empresa</a></li>
+          <li class="mb-2"><a href="politica-de-privacidade.html"><i class="fas fa-chevron-right me-1"></i> Política de Privacidade</a></li>
+          <li class="mb-2"><a href="termos-de-uso.html"><i class="fas fa-chevron-right me-1"></i> Termos de Uso</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero text-center">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <h1>Internet Fibra que realmente <span style="color:#ffcc00;">conecta você</span></h1>
-          <p class="lead mb-4">Navegação ultra veloz, estabilidade total e suporte humano. A Vertical Fibra chegou em Londrina para transformar sua experiência online.</p>
-          <a href="#planos" class="btn btn-primary-custom text-white btn-lg px-5">Ver Planos</a>
-          <p class="mt-3 small"><i class="bi bi-shield-check"></i> Instalação em até 48h • Sem fidelidade • Wi-Fi grátis</p>
-        </div>
+      <div class="col-md-4 mb-3">
+        <h6 class="text-uppercase text-white mb-3">Contato</h6>
+        <p class="small mb-1"><i class="fas fa-phone me-2"></i> (43) 3771-2726</p>
+        <p class="small mb-1"><i class="fas fa-envelope me-2"></i> contato@verticalfibra.com.br</p>
+        <p class="small"><i class="fas fa-map-marker-alt me-2"></i> Rua Mato Grosso, 1435, Sala 02, Centro, Londrina/PR</p>
       </div>
     </div>
-  </section>
-
-  <!-- Sobre / Diferenciais com ícones e frase inovadora -->
-  <section id="sobre" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="section-title">Por que a Vertical Fibra?</h2>
-      <p class="mb-5 text-muted">Unimos tecnologia de ponta e atendimento local para entregar a melhor internet de Londrina.</p>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="bg-white p-4 rounded-4 shadow-sm h-100">
-            <img src="https://www.zamix.com.br/assets/img/blog/e25ea1e52e98fd6f67e5ed5c53cfd4d2.jpg" 
-                 alt="Fibra óptica" class="img-fluid rounded-3 mb-3" style="max-height: 180px; width: 100%; object-fit: cover;">
-            <i class="bi bi-speedometer2 icon-tech mb-3 d-block"></i>
-            <h5 class="fw-bold">Velocidade Real</h5>
-            <p class="text-muted">Conexão 100% fibra óptica com download e upload simétricos, sem quedas.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="bg-white p-4 rounded-4 shadow-sm h-100">
-            <img src="https://onitel.com.br/wp-content/uploads/2020/06/5_11.webp" 
-                 alt="Tecnologia moderna" class="img-fluid rounded-3 mb-3" style="max-height: 180px; width: 100%; object-fit: cover;">
-            <i class="bi bi-shield-lock icon-tech mb-3 d-block"></i>
-            <h5 class="fw-bold">Segurança e Estabilidade</h5>
-            <p class="text-muted">Rede protegida e monitoramento 24h para você nunca ficar offline.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="bg-white p-4 rounded-4 shadow-sm h-100">
-            <img src="https://nacionalfibra.com.br/painel/dashboard/uploads/noticias/img-news-como-verificar-velocidade-da-sua-internet-nacional-fibra-1582227428-2002202020163708.jpg" 
-                 alt="Teste de velocidade" class="img-fluid rounded-3 mb-3" style="max-height: 180px; width: 100%; object-fit: cover;">
-            <i class="bi bi-heart-pulse icon-tech mb-3 d-block"></i>
-            <h5 class="fw-bold">Suporte Humanizado</h5>
-            <p class="text-muted">Equipe local em Londrina pronta para ajudar via WhatsApp, telefone ou e-mail.</p>
-          </div>
-        </div>
-      </div>
+    <hr class="border-secondary my-4">
+    <div class="text-center small">
+      <span>© 2025 Vertical Fibra Provedor de Acesso A Internet LTDA. Todos os direitos reservados.</span>
+      <span class="ms-3">Inscrição Estadual PR: 91171201-60</span>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- Planos de Internet -->
-  <section id="planos" class="py-5">
-    <div class="container text-center">
-      <h2 class="section-title">Nossos Planos Fibra</h2>
-      <p class="text-muted mb-4">Escolha a velocidade ideal para sua casa ou empresa. Todos incluem Wi-Fi 6 e instalação gratuita.</p>
-      <div class="row g-4 justify-content-center">
-        <!-- Plano 300 Mega -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card plan-card h-100">
-            <div class="card-header py-3">
-              <h4 class="my-0">Fibra 300 Mega</h4>
-            </div>
-            <div class="card-body d-flex flex-column">
-              <img src="https://nacionalfibra.com.br/novosite/wp-content/uploads/2024/06/INTERNET-3-1024x1024.png" 
-                   alt="Plano 300 Mega" class="img-fluid mb-3" style="max-height: 140px; object-fit: contain;">
-              <span class="plan-price">R$ 89,90<small class="fs-6 text-muted">/mês</small></span>
-              <ul class="list-unstyled mt-3 text-start">
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Download 300 Mbps</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Upload 150 Mbps</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Wi-Fi 6 incluso</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Sem fidelidade</li>
-              </ul>
-              <a href="https://wa.me/554337712726?text=Olá!+Quero+assinar+o+plano+Fibra+300+Mega" 
-                 target="_blank" class="btn btn-primary-custom text-white mt-auto align-self-center">Assinar via WhatsApp</a>
-            </div>
-          </div>
-        </div>
-        <!-- Plano 500 Mega (Destaque) -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card plan-card h-100 border-primary border-2" style="transform: scale(1.02);">
-            <div class="card-header bg-warning text-dark py-3">
-              <h4 class="my-0">Fibra 500 Mega <span class="badge bg-danger ms-1">Mais vendido</span></h4>
-            </div>
-            <div class="card-body d-flex flex-column">
-              <img src="https://nacionalfibra.com.br/novosite/wp-content/uploads/2024/06/INTERNET-3-1024x1024.png" 
-                   alt="Plano 500 Mega" class="img-fluid mb-3" style="max-height: 140px; object-fit: contain;">
-              <span class="plan-price">R$ 109,90<small class="fs-6 text-muted">/mês</small></span>
-              <ul class="list-unstyled mt-3 text-start">
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Download 500 Mbps</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Upload 250 Mbps</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Wi-Fi 6 Premium</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>1 mês grátis na adesão anual</li>
-              </ul>
-              <a href="https://wa.me/554337712726?text=Olá!+Quero+assinar+o+plano+Fibra+500+Mega" 
-                 target="_blank" class="btn btn-primary-custom text-white mt-auto align-self-center">Assinar via WhatsApp</a>
-            </div>
-          </div>
-        </div>
-        <!-- Plano 1 Giga -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card plan-card h-100">
-            <div class="card-header py-3">
-              <h4 class="my-0">Fibra 1 Giga</h4>
-            </div>
-            <div class="card-body d-flex flex-column">
-              <img src="https://nacionalfibra.com.br/novosite/wp-content/uploads/2024/06/INTERNET-3-1024x1024.png" 
-                   alt="Plano 1 Giga" class="img-fluid mb-3" style="max-height: 140px; object-fit: contain;">
-              <span class="plan-price">R$ 149,90<small class="fs-6 text-muted">/mês</small></span>
-              <ul class="list-unstyled mt-3 text-start">
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Download 1 Gbps</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Upload 500 Mbps</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Wi-Fi 6 Ultra</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>IP fixo grátis (sob consulta)</li>
-              </ul>
-              <a href="https://wa.me/554337712726?text=Olá!+Quero+assinar+o+plano+Fibra+1+Giga" 
-                 target="_blank" class="btn btn-primary-custom text-white mt-auto align-self-center">Assinar via WhatsApp</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="mt-4 text-muted small">* Preços válidos para Londrina e região. Consulte cobertura.</p>
-    </div>
-  </section>
-
-  <!-- Depoimentos -->
-  <section id="depoimentos" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="section-title">O que nossos clientes dizem</h2>
-      <div class="row g-4 mt-4">
-        <div class="col-md-4">
-          <div class="testimonial-card h-100">
-            <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
-            <p class="mt-3 fst-italic">"Troquei da operadora grande e não me arrependo. A velocidade é real e o suporte resolve na hora. Recomendo!"</p>
-            <strong>– Camila S., Londrina</strong>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="testimonial-card h-100">
-            <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
-            <p class="mt-3 fst-italic">"Trabalho home office e precisava de uma conexão estável. A Vertical Fibra superou minhas expectativas."</p>
-            <strong>– Rafael M., Centro</strong>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="testimonial-card h-100">
-            <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
-            <p class="mt-3 fst-italic">"Instalação rápida e internet voando. Até meu filho parou de reclamar do lag nos jogos. Show!"</p>
-            <strong>– Juliana P., Gleba Palhano</strong>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contato / Localização -->
-  <section id="contato" class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-5 mb-4 mb-lg-0">
-          <h2 class="section-title text-start">Fale conosco</h2>
-          <p class="text-muted">Estamos no coração de Londrina. Visite-nos ou envie uma mensagem.</p>
-          <ul class="list-unstyled">
-            <li class="mb-3"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Rua Mato Grosso, 1435, Sala 02, Centro – Londrina/PR</li>
-            <li class="mb-3"><i class="bi bi-telephone-fill text-primary me-2"></i> <a href="tel:554337712726" class="text-dark text-decoration-none">(43) 3771-2726</a></li>
-            <li class="mb-3"><i class="bi bi-envelope-fill text-primary me-2"></i> <a href="mailto:contato@verticalfibra.com.br" class="text-dark text-decoration-none">contato@verticalfibra.com.br</a></li>
-            <li><i class="bi bi-whatsapp text-success me-2"></i> <a href="https://wa.me/554337712726" target="_blank" class="text-dark text-decoration-none">Atendimento via WhatsApp</a></li>
-          </ul>
-          <p class="mt-3"><strong>CNPJ:</strong> 62.257.542/0001-00 • <strong>IE:</strong> 91171201-60</p>
-        </div>
-        <div class="col-lg-7">
-          <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.670887559!2d-51.165678684484!3d-23.310340484804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb435af5b1bbbb%3A0x301e1a5c0b9d8a4a!2sRua%20Mato%20Grosso%2C%201435%20-%20Centro%2C%20Londrina%20-%20PR%2C%2086010-180!5e0!3m2!1spt-BR!2sbr!4v1715600000000" 
-                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer pt-5 pb-4">
-    <div class="container text-center text-md-start">
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <h5 class="fw-bold text-white">Vertical Fibra</h5>
-          <p>Provedor de acesso à internet fibra óptica em Londrina e região.</p>
-          <p class="small">Razão Social: Vertical Fibra Provedor de Acesso A Internet LTDA<br>CNPJ: 62.257.542/0001-00</p>
-        </div>
-        <div class="col-md-4 mb-3">
-          <h5 class="fw-bold text-white">Links úteis</h5>
-          <ul class="list-unstyled">
-            <li><a href="#sobre">Sobre nós</a></li>
-            <li><a href="#planos">Planos</a></li>
-            <li><a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a></li>
-            <li><a href="termos-de-uso.html" target="_blank">Termos de Uso</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 mb-3">
-          <h5 class="fw-bold text-white">Atendimento</h5>
-          <p><i class="bi bi-telephone"></i> (43) 3771-2726<br>
-             <i class="bi bi-envelope"></i> contato@verticalfibra.com.br<br>
-             Seg a Sex: 8h às 18h | Sáb: 8h às 12h</p>
-          <div class="mt-2">
-            <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
-            <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
-            <a href="https://wa.me/554337712726" target="_blank" class="text-white"><i class="bi bi-whatsapp fs-5"></i></a>
-          </div>
-        </div>
-      </div>
-      <hr class="border-secondary">
-      <div class="text-center small">
-        &copy; 2026 Vertical Fibra – Todos os direitos reservados. Provedor de Acesso às Redes de Comunicações (61.90-6-01). 
-      </div>
-    </div>
-  </footer>
-
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/554337712726?text=Olá%20Vertical%20Fibra!%20Quero%20mais%20informações." 
-     target="_blank" class="whatsapp-float" title="Fale conosco pelo WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-  </a>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('mainNavbar');
+    if (window.scrollY > 20) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+  });
+</script>
 </body>
 </html>
