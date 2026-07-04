@@ -3,41 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Termos de Uso – Vertical Fibra</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Termos de Uso - Vertical Fibra</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root { --primary: #0d6efd; --accent: #00d4ff; --dark: #0a0f1c; --light-bg: #f8f9fc; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #fff; color: #1e293b; }
+    .navbar {
+      background: rgba(10,15,28,0.9); backdrop-filter: blur(20px); padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .navbar-brand { font-weight: 700; font-size: 1.8rem; color: #fff !important; display: flex; align-items: center; gap: 0.5rem; }
+    .navbar-brand i { color: var(--accent); font-size: 2rem; }
+    .navbar-nav .nav-link { color: rgba(255,255,255,0.85) !important; font-weight: 500; border-radius: 2rem; padding: 0.5rem 1rem !important; }
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { background: rgba(255,255,255,0.1); color: #fff !important; }
+    .btn-whatsapp-nav { background: #25d366; color: #fff; border-radius: 2rem; padding: 0.5rem 1.4rem; font-weight: 600; border: none; display: flex; align-items: center; gap: 0.4rem; }
+    .btn-whatsapp-nav:hover { background: #1ebc5a; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37,211,102,0.4); }
+    .page-header {
+      background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+      padding: 8rem 0 4rem; color: #fff; margin-bottom: 3rem;
+    }
+    .terms-content h2 { font-weight: 700; color: #0a0f1c; margin-top: 2.5rem; }
+    footer {
+      background: #0a0f1c; color: #adb5bd; padding: 3rem 0 2rem; font-size: 0.95rem; margin-top: 4rem;
+    }
+    footer a { color: #adb5bd; text-decoration: none; }
+  </style>
 </head>
-<body class="bg-light">
-  <div class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 bg-white p-5 rounded-4 shadow">
-        <h1 class="mb-4">Termos de Uso</h1>
-        <p>Bem-vindo ao site da <strong>Vertical Fibra Provedor de Acesso A Internet LTDA</strong>, inscrita no CNPJ 62.257.542/0001-00. Ao acessar e utilizar este site, você concorda com os termos abaixo.</p>
-        
-        <h4 class="mt-4">1. Aceitação</h4>
-        <p>O uso deste site implica na aceitação plena dos Termos de Uso. Caso não concorde, pedimos que interrompa a navegação.</p>
-        
-        <h4>2. Serviços</h4>
-        <p>O site apresenta informações sobre os planos de internet fibra óptica oferecidos pela Vertical Fibra. As condições comerciais (preços, velocidades e promoções) podem ser alteradas sem aviso prévio, sempre respeitando os contratos vigentes.</p>
-        
-        <h4>3. Propriedade intelectual</h4>
-        <p>Todo o conteúdo (textos, imagens, logotipos, ícones) é de propriedade da Vertical Fibra ou licenciado. A reprodução sem autorização é proibida.</p>
-        
-        <h4>4. Isenção de responsabilidade</h4>
-        <p>Embora nos esforcemos para manter as informações precisas, não garantimos a ausência de erros técnicos ou desatualizações. A contratação dos serviços está sujeita à análise de cobertura e disponibilidade técnica na região.</p>
-        
-        <h4>5. Links externos</h4>
-        <p>Nosso site pode conter links para sites de terceiros (como WhatsApp e redes sociais). Não nos responsabilizamos pelo conteúdo ou práticas de privacidade desses sites.</p>
-        
-        <h4>6. Privacidade</h4>
-        <p>O tratamento de dados pessoais é regido pela nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
-        
-        <h4>7. Contato</h4>
-        <p>Dúvidas sobre estes termos podem ser enviadas para <strong>contato@verticalfibra.com.br</strong>.</p>
-        
-        <p class="mt-4">Última atualização: 13 de maio de 2026.</p>
-        <p><a href="index.html" class="btn btn-outline-primary">← Voltar ao site</a></p>
-      </div>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-broadcast-tower"></i> Vertical<span style="color:#00d4ff;">Fibra</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTermos"
+            style="border-color: rgba(255,255,255,0.3);">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTermos">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="politica-de-privacidade.html">Privacidade</a></li>
+        <li class="nav-item"><a class="nav-link active" href="termos-de-uso.html">Termos</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <a href="https://wa.me/554337712726" target="_blank" class="btn btn-whatsapp-nav">
+            <i class="fab fa-whatsapp"></i> (43) 3771-2726
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Termos de Uso</h1>
+    <p class="lead text-white-50">Diretrizes para utilização do site e serviços da Vertical Fibra</p>
+  </div>
+</header>
+
+<main class="container terms-content">
+  <p>Ao acessar o site <strong>verticalfibra.com.br</strong> ou contratar os serviços da <strong>Vertical Fibra Provedor de Acesso A Internet LTDA</strong> (CNPJ 62.257.542/0001-00), você concorda com estes termos. Leia atentamente.</p>
+
+  <h2>1. Aceitação</h2>
+  <p>O uso deste site e de nossos serviços implica na aceitação integral destes Termos de Uso. Caso não concorde, não utilize nossos canais digitais.</p>
+
+  <h2>2. Serviços prestados</h2>
+  <p>Atuamos como provedor de acesso à internet banda larga via fibra óptica, conforme regulamentação da Anatel. As velocidades, preços e condições estão sujeitas à contratação de plano específico.</p>
+
+  <h2>3. Obrigações do usuário</h2>
+  <ul>
+    <li>Fornecer informações cadastrais verdadeiras e atualizadas</li>
+    <li>Utilizar a conexão de forma lícita, sem violar direitos de terceiros</li>
+    <li>Manter a segurança de seus dispositivos e credenciais</li>
+  </ul>
+
+  <h2>4. Propriedade intelectual</h2>
+  <p>Todo o conteúdo do site (marcas, logotipos, textos, imagens) é de propriedade da Vertical Fibra. É proibida a reprodução sem autorização.</p>
+
+  <h2>5. Limitação de responsabilidade</h2>
+  <p>A Vertical Fibra não se responsabiliza por danos indiretos ou lucros cessantes decorrentes do uso da internet, nem por conteúdos acessados pelo usuário. Interrupções programadas para manutenção serão comunicadas previamente quando possível.</p>
+
+  <h2>6. Rescisão</h2>
+  <p>O contrato de prestação de serviço pode ser rescindido conforme cláusulas contratuais específicas, respeitados os prazos e multas eventualmente aplicáveis.</p>
+
+  <h2>7. Legislação aplicável</h2>
+  <p>Estes termos são regidos pelas leis brasileiras. Fica eleito o foro da comarca de Londrina/PR para dirimir quaisquer dúvidas.</p>
+
+  <p class="mt-5"><strong>Contato:</strong> Rua Mato Grosso, 1435, Sala 02, Centro, Londrina/PR – CEP 86010-180 | E-mail: contato@verticalfibra.com.br | Tel: (43) 3771-2726</p>
+</main>
+
+<footer>
+  <div class="container text-center">
+    <p class="small mb-0">© 2025 Vertical Fibra Provedor de Acesso A Internet LTDA</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
