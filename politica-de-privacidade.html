@@ -3,45 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Política de Privacidade – Vertical Fibra</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Política de Privacidade - Vertical Fibra</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root { --primary: #0d6efd; --accent: #00d4ff; --dark: #0a0f1c; --light-bg: #f8f9fc; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #fff; color: #1e293b; }
+    .navbar {
+      background: rgba(10,15,28,0.9); backdrop-filter: blur(20px); padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .navbar-brand { font-weight: 700; font-size: 1.8rem; color: #fff !important; display: flex; align-items: center; gap: 0.5rem; }
+    .navbar-brand i { color: var(--accent); font-size: 2rem; }
+    .navbar-nav .nav-link { color: rgba(255,255,255,0.85) !important; font-weight: 500; border-radius: 2rem; padding: 0.5rem 1rem !important; }
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { background: rgba(255,255,255,0.1); color: #fff !important; }
+    .btn-whatsapp-nav { background: #25d366; color: #fff; border-radius: 2rem; padding: 0.5rem 1.4rem; font-weight: 600; border: none; display: flex; align-items: center; gap: 0.4rem; }
+    .btn-whatsapp-nav:hover { background: #1ebc5a; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37,211,102,0.4); }
+    .page-header {
+      background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+      padding: 8rem 0 4rem; color: #fff; margin-bottom: 3rem;
+    }
+    .policy-content h2 { font-weight: 700; color: #0a0f1c; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .policy-content p, .policy-content ul { color: #334155; line-height: 1.7; }
+    footer {
+      background: #0a0f1c; color: #adb5bd; padding: 3rem 0 2rem; font-size: 0.95rem; margin-top: 4rem;
+    }
+    footer a { color: #adb5bd; text-decoration: none; }
+    footer a:hover { color: #00d4ff; }
+  </style>
 </head>
-<body class="bg-light">
-  <div class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 bg-white p-5 rounded-4 shadow">
-        <h1 class="mb-4">Política de Privacidade</h1>
-        <p><strong>Vertical Fibra Provedor de Acesso A Internet LTDA</strong>, CNPJ: 62.257.542/0001-00, com sede na Rua Mato Grosso, 1435, Sala 02, Centro, Londrina/PR, CEP 86010-180, valoriza a privacidade de seus usuários e clientes.</p>
-        
-        <h4 class="mt-4">1. Coleta de dados</h4>
-        <p>Coletamos apenas informações necessárias para a prestação dos serviços de internet, como nome, CPF/CNPJ, endereço de instalação, e-mail e telefone de contato. Esses dados são fornecidos voluntariamente pelo titular no momento da contratação ou contato via site, WhatsApp ou telefone.</p>
-        
-        <h4>2. Uso das informações</h4>
-        <p>Os dados são utilizados exclusivamente para:</p>
-        <ul>
-          <li>Cadastro e ativação do serviço de internet fibra;</li>
-          <li>Comunicação sobre faturas, suporte técnico e novidades dos serviços contratados;</li>
-          <li>Cumprimento de obrigações legais e regulatórias.</li>
-        </ul>
-        
-        <h4>3. Compartilhamento</h4>
-        <p>Não comercializamos, alugamos ou compartilhamos dados pessoais com terceiros, exceto quando exigido por lei ou mediante autorização expressa do titular.</p>
-        
-        <h4>4. Cookies</h4>
-        <p>Nosso site pode utilizar cookies estritamente necessários para funcionamento e análise de audiência (Google Analytics). O usuário pode desabilitá-los nas configurações do navegador.</p>
-        
-        <h4>5. Segurança</h4>
-        <p>Adotamos medidas técnicas e organizacionais para proteger os dados contra acessos não autorizados, perda ou alteração. Utilizamos criptografia e boas práticas de mercado.</p>
-        
-        <h4>6. Direitos do titular (LGPD)</h4>
-        <p>O titular dos dados pode, a qualquer momento, solicitar acesso, correção, exclusão ou portabilidade de seus dados, entrando em contato pelo e-mail <strong>contato@verticalfibra.com.br</strong>.</p>
-        
-        <h4>7. Alterações</h4>
-        <p>Esta política pode ser atualizada periodicamente. Recomendamos a revisão constante. A última atualização ocorreu em 13 de maio de 2026.</p>
-        
-        <p class="mt-4"><a href="index.html" class="btn btn-outline-primary">← Voltar ao site</a></p>
-      </div>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-broadcast-tower"></i> Vertical<span style="color:#00d4ff;">Fibra</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPolitica"
+            style="border-color: rgba(255,255,255,0.3);">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarPolitica">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link active" href="politica-de-privacidade.html">Privacidade</a></li>
+        <li class="nav-item"><a class="nav-link" href="termos-de-uso.html">Termos</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <a href="https://wa.me/554337712726" target="_blank" class="btn btn-whatsapp-nav">
+            <i class="fab fa-whatsapp"></i> (43) 3771-2726
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Política de Privacidade</h1>
+    <p class="lead text-white-50">Última atualização: 01/07/2026</p>
+  </div>
+</header>
+
+<main class="container policy-content">
+  <p>A <strong>Vertical Fibra Provedor de Acesso A Internet LTDA</strong> (CNPJ 62.257.542/0001-00) leva a sua privacidade a sério. Esta política explica como coletamos, usamos e protegemos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD).</p>
+
+  <h2>1. Dados coletados</h2>
+  <p>Podemos coletar as seguintes informações quando você entra em contato ou contrata nossos serviços:</p>
+  <ul>
+    <li>Nome completo ou razão social</li>
+    <li>CPF/CNPJ</li>
+    <li>Endereço de instalação e correspondência</li>
+    <li>Telefone e e-mail</li>
+    <li>Informações de navegação (IP, logs de acesso) para garantia da qualidade do serviço</li>
+  </ul>
+
+  <h2>2. Finalidade do tratamento</h2>
+  <p>Utilizamos seus dados para:</p>
+  <ul>
+    <li>Prestação dos serviços de internet contratados</li>
+    <li>Emissão de faturas e cobrança</li>
+    <li>Atendimento ao cliente e suporte técnico</li>
+    <li>Envio de comunicados importantes sobre o serviço</li>
+    <li>Cumprimento de obrigações legais e regulatórias</li>
+  </ul>
+
+  <h2>3. Compartilhamento de dados</h2>
+  <p>Seus dados pessoais não são vendidos. Podem ser compartilhados apenas:</p>
+  <ul>
+    <li>Com parceiros operacionais essenciais para a prestação do serviço (ex: empresas de cobrança)</li>
+    <li>Mediante ordem judicial ou obrigação legal</li>
+  </ul>
+
+  <h2>4. Cookies</h2>
+  <p>Nosso site pode utilizar cookies para melhorar sua experiência e para fins de análise de tráfego. Você pode configurar seu navegador para recusar cookies, mas isso pode afetar algumas funcionalidades.</p>
+
+  <h2>5. Seus direitos</h2>
+  <p>Conforme a LGPD, você pode solicitar acesso, correção, exclusão ou portabilidade dos seus dados, além de revogar consentimento. Entre em contato pelo e-mail <a href="mailto:contato@verticalfibra.com.br">contato@verticalfibra.com.br</a>.</p>
+
+  <h2>6. Contato do Encarregado de Dados</h2>
+  <p>Encarregado (DPO): E-mail contato@verticalfibra.com.br | Telefone (43) 3771-2726 | Endereço: Rua Mato Grosso, 1435, Sala 02, Centro, Londrina/PR, CEP 86010-180.</p>
+
+  <p class="mt-5 text-muted fst-italic">Esta política pode ser atualizada periodicamente. Recomendamos a consulta regular.</p>
+</main>
+
+<footer>
+  <div class="container text-center">
+    <p class="small mb-0">© 2025 Vertical Fibra Provedor de Acesso A Internet LTDA - CNPJ 62.257.542/0001-00</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
